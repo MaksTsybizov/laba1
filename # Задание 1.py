@@ -1,33 +1,18 @@
-# Задание 1
+# Практическая 1 / 10 вар 
+# Задание 1 Определите, есть ли в списке повторяющиеся элементы, если да, то вывести на экран это значение, иначе сообщение об их отсутствии.
 
-arr = []
-
-for _ in range(10):
-
-   arr.append(int(input('Введите число: ')))
-
-for i in range(9):
-
-   if arr[i] < 0 and arr[i + 1] < 0:
-
-       print('Пара:', arr[i], arr[i + 1])
-
-print()
-
-# Задание 2
-
-arr = []
-
-arr_2 = []
-
-for _ in range(10):
-
-   arr.append(int(input('Введите число: ')))
-
-for el in arr:
-
-   if el not in arr_2:
-
-       arr_2.append(el)
-
-print(arr_2)
+from random import randint
+lst = [randint(1,10) for i in range(10)]
+print(lst)
+AAA = [i for i in set(lst) if lst.count(i) > 1]
+if len(AAA) == 0:
+   print("Повторяющихся элементов нет")
+else:
+   print(AAA)
+   
+   
+   
+# Задание 2 
+arr = [1, 2, 3, 10, 20, 23, 43, 5, 6, 7]    # и т.д.
+print(*arr)
+print(*[0 if i < 10 else 1 if i > 20 else i for i in arr])
