@@ -1,5 +1,3 @@
-26 lines (16 sloc)  579 Bytes
-
 def transpose(a):
     for i in range(rows):
 
